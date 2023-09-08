@@ -46,6 +46,9 @@ M = int(input())
 checks = list(map(int, input().split()))
 
 dic = {}
+# dict는 hash table 을 이용한다.
+# hash table 은 key 값에 따라 value 가 저장될 위치가 결정된다.
+# 그래서 탐색 시 key 값이 있으면 굳이 배열의 전체를 탐색하지 않고도 value를 얻을 수 있고, 탐색속도 차이가 발생한다.
 
 for check in checks:
     dic[check] = 0  # key 값을 check 으로 하고, value 를 0으로 초기화
