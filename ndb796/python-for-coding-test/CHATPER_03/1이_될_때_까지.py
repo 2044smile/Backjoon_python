@@ -5,6 +5,7 @@
 최종
 N이 1이 될 때 까지 2번의 과정을 수행해야 하는 횟수의 최솟값을 출력한다.
 """
+# cslee
 n, k = map(int, input().split())
 result = 0
 
