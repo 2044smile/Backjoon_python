@@ -5,13 +5,25 @@
 
 출력 조건
 첫째 줄에 나이트가 이동할 수 있는 경우의 수를 출력하시오.
+"""""""""
+target = input()  # a1
+row = int(target[1])  # 1
+column = (int(ord(target[0])) - int(ord('a'))) + 1  # a
+# row = Down, Up
+# col = Left, Right
 """
-target = input()
-row = int(target[1])
-col = (int(ord(target[0])) - int(ord('a'))) + 1
+steps 에서 모든 경우의 수를 체크 한다. 
+U U L, U L L, D L L, D D L, D D R, D R R, U R R, U U R
+"""
+steps = [(-2, -1), (-1, -2), (1, -2), (2, -1), (2, 1), (1, 2), (-1, 2), (-2, 1)]
 
-s = ['a', 'b', 'c', 'd', 'e', 'f', 'g', 'h']
-i = [1, 2, 3, 4, 5, 6, 7, 8]
+result = 0
+for step in steps:  # (-2, -1)
+    # 이동 하고자 하는 위치 확인
+    next_row = row + step[0]  # row = 1, step[0] = -2
+    next_column = column + step[1]  # column = 1, step[1] = -1
+    # 해당 위치로 이동이 가능 하다면 카운트 증가
+    if 1 <= next_row <= 8 and 1 <= next_column <= 8:
+        result += 1
 
-print(s[row-1])
-print(i[col-1])
+print(result)
