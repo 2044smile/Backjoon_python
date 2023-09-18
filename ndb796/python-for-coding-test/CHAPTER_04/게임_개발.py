@@ -38,6 +38,8 @@ dx = [-1, 0, 1, 0]  # 행 (북, 남) 만 가능
 dy = [0, 1, 0, -1]  # 열 (동, 서) 만 가능
 
 # 왼쪽으로 회전
+# 서 -> 남 -> 동 -> 북 으로 회전
+# 값의 변화가 없다, 만약 동 쪽에서 값을 찾았다 해도 북으로 검사한다.
 def turn_left():
     global direction
     direction -= 1
@@ -60,8 +62,8 @@ while True:
     # if 절이 충족하지 않으면 x 는 저장되어 있는 원래 위치로
     if d[nx][ny] == 0 and array[nx][ny] == 0:
         d[nx][ny] = 1
-        x = nx
-        y = ny
+        x = nx  # 데이터가 맞다면 그 방향으로 전진한다.
+        y = ny  # 데이터가 맞다면 그 방향으로 전진한다. 즉 x, y 값을 변경한다.
         count += 1
         turn_time = 0
         continue
