@@ -32,12 +32,13 @@
 #     basket[j-1] = k
 #
 # print(basket)
-n, m = 5, 4  # map(int, input().split())  # 5 4
+n, m = map(int, input().split())
 basket = [0 for _ in range(n)]
 
-for z in range(m):  # 4번 수행
-    i, j, k = map(int, input().split())  # 1 2 3
-    for x in range(i, j+1):  # 1, 3 | (1,2) 2번 for 문 수행
+for z in range(m):
+    i, j, k = map(int, input().split())
+    for x in range(i, j+1):
         basket[x-1] = k
 
-print(basket)
+for c in range(n):
+    print(basket[c], end=' ')
