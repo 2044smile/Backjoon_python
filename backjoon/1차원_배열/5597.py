@@ -20,3 +20,12 @@ for i in range(1, 28 + 1):
 for target in range(1, 30 + 1):
     if target not in students:
         print(target)
+# different case code https://claude-u.tistory.com/324
+students = [i for i in range(1, 31)]
+
+for _ in range(28):
+    applied = int(input())
+    students.remove(applied)
+
+print(min(students))
+print(max(students))
