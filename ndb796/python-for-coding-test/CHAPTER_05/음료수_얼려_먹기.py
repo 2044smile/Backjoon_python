@@ -16,7 +16,6 @@ N x M 크기의 얼음 틀이 있다.
 
 즉, 구멍이 뚫려 있는 곳에 아이스크림이 존재한다.
 """""""""
-# N, M을 공백을 기준으로 구분하여 입력 받기
 n, m = map(int, input().split())
 
 graph = [list(map(int, input())) for _ in range(n)]
