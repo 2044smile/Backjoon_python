@@ -17,22 +17,17 @@ N x M 크기의 얼음 틀이 있다.
 즉, 구멍이 뚫려 있는 곳에 아이스크림이 존재한다.
 """""""""
 # N, M을 공백을 기준으로 구분하여 입력 받기
-n, m = map(int, input().split())  # 4(세로) 5(가로)
+n, m = map(int, input().split())
 
-# 2차원 리스트의 맵 정보 입력 받기 @cslee
 graph = [list(map(int, input())) for _ in range(n)]
 
 
-# DFS로 특정한 노드를 방문한 뒤에 연결된 모든 노드들도 방문
 def dfs(x, y):
-    # 주어진 범위를 벗어나는 경우에는 즉시 종료
     if x <= -1 or x >= n or y <= -1 or y >= m:
         return False
-    # 현재 노드를 아직 방문하지 않았다면
     if graph[x][y] == 0:
-        # 해당 노드 방문 처리
         graph[x][y] = 1
-        # 상, 하, 좌, 우의 위치들도 모두 재귀적으로 호출 얼려버린다.
+
         dfs(x - 1, y)
         dfs(x, y - 1)
         dfs(x + 1, y)
@@ -41,12 +36,10 @@ def dfs(x, y):
     return False
 
 
-# 모든 노드(위치)에 대하여 음료수 채우기
 result = 0
 for i in range(n):
     for j in range(m):
-        # 현재 위치에서 DFS 수행
         if dfs(i, j):
-            result += 1  # 얼음이 얼어있지 않은 곳을 얼리게 되면 +1
+            result += 1
 
-print(result)  # 정답 출력
+print(result)
