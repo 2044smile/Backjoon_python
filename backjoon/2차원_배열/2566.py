@@ -18,7 +18,7 @@ for i in range(9):  # 행
     for j in range(1, 9, 9):  # 열
         row.append(list(map(int, input().split())))
 
-for index, k in enumerate(row):
+for k in row:
     max_values.append(max(k))  # 최댓값
     max_index.append(k.index(max(k)))
 
