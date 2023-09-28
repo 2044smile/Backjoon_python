@@ -22,6 +22,7 @@ for k in row:
     max_values.append(max(k))  # 최댓값
     max_index.append(k.index(max(k)))
 
+# max_index EX] [2, 4, 0, 3, '6', 1, 5, 2, 0]
 # max_values EX] [85, 88, 87, 85, '90', 87, 89, 70, 87] => 90
 # max_values 행에서 몇번 째에 위치해 있는 지 EX] max_values.index(max(max_values)) + 1 => 5
 #            열에서                          EX] max_index[max_values.index(max(max_values))] + 1 => 7
