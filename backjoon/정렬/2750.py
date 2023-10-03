@@ -20,3 +20,24 @@ lst.sort()
 
 for j in lst:
     print(j)
+# https://0ver-grow.tistory.com/412
+# 버블정렬로 정렬하기
+# N = int(input())
+# M = []
+#
+# for i in range(N):
+#     M.append(int(input()))
+#
+# # Bubble Sort
+# for i in range(len(M)):
+#     print('i : ', i)
+#     print('M[i] : ', M[i])
+#     for j in range(len(M)):
+#         print('j : ', j)
+#         print('M[j] : ', M[j])
+#         if M[i] < M[j]:
+#             M[i], M[j] = M[j], M[i]  # 5 2 3 4 1 | 2 5 3 4 1 | 2 3 5 4 1 | 2 3 4 5 1 | 1 2 3 4 5
+#             print(M)
+#
+# for n in M:
+#     print(n)
