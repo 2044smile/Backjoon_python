@@ -41,3 +41,19 @@ for j in lst:
 #
 # for n in M:
 #     print(n)
+# https://0ver-grow.tistory.com/412
+# 삽입정렬로 정렬하기
+# N = int(input())
+# M = []
+#
+# for i in range(N):
+#     M.append(int(input()))
+#
+# # Insert Sort
+# for i in range(1, len(M)):  # 1, 2, 3, 4
+#     while (i > 0) & (M[i] < M[i-1]):  # 5 2 3 4 1 | 2 5 3 4 1 | 2 3 5 4 1 | 2 3 4 5 1 | 1 2 3 4 5
+#         M[i], M[i-1] = M[i-1], M[i]  # EX] 앞에 있는 값들을 체크한다. i 값이 1이라면 M[i-1] 0 까지 검사한다.
+#         i -= 1
+#
+# for n in M:
+#     print(n)
