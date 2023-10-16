@@ -37,33 +37,34 @@
 #     print(j, end=" ")
 
 # https://chancoding.tistory.com/45
-from sys import stdin
+# from sys import stdin
+#
+# _ = stdin.readline()  # 10
+# # 오름차순, '이분 탐색'을 위해서 리스트 N을 순서대로 정렬
+# N = sorted(map(int, stdin.readline().split()))  # [-10, -10, 2, 3, 3, 6, 7, 10, 10, 10]
+# _ = stdin.readline()  # 8
+# M = map(int, stdin.readline().split())  # 10 9 -5 2 3 4 5 -10
+#
+#
+# def binary(n, N, start, end):  # -10, [-10, -10, 2 ...], 0, 9 -> 3
+#     if start > end:
+#         return 0
+#     m = (start+end) // 2  # m=4 | m=1
+#     if n == N[m]:  # -10 == N[4]=3 | -10 == N[1]=-10
+#         return N[start:end+1].count(n)  # N[0:1+1].count() -> 2
+#     elif n < N[m]:  # -10 == N[4]=3 True, m=4-1=3 |
+#         return binary(n, N, start, m-1)
+#     else:
+#         return binary(n, N, m+1, end)
+#
+# n_dic = {}  # 리스트 N에 있는 요소들이 각각이 몇개가 있는지를 dict에 담아서 저장
+#
+# for n in N:  # n=-10
+#     start = 0  # 0
+#     end = len(N) - 1  # 9
+#     if n not in n_dic:
+#         n_dic[n] = binary(n, N, start, end)  # {-10: 2}
+#
+# print(' '.join(str(n_dic[x]) if x in n_dic else '0' for x in M))
 
-_ = stdin.readline()  # 10
-# 오름차순, '이분 탐색'을 위해서 리스트 N을 순서대로 정렬
-N = sorted(map(int, stdin.readline().split()))  # [-10, -10, 2, 3, 3, 6, 7, 10, 10, 10]
-_ = stdin.readline()  # 8
-M = map(int, stdin.readline().split())  # 10 9 -5 2 3 4 5 -10
-
-
-def binary(n, N, start, end):  # -10, [-10, -10, 2 ...], 0, 9 -> 3
-    if start > end:
-        return 0
-    m = (start+end) // 2  # m=4 | m=1
-    if n == N[m]:  # -10 == N[4]=3 | -10 == N[1]=-10
-        return N[start:end+1].count(n)  # N[0:1+1].count() -> 2
-    elif n < N[m]:  # -10 == N[4]=3 True, m=4-1=3 |
-        return binary(n, N, start, m-1)
-    else:
-        return binary(n, N, m+1, end)
-
-n_dic = {}  # 리스트 N에 있는 요소들이 각각이 몇개가 있는지를 dict에 담아서 저장
-
-for n in N:  # n=-10
-    start = 0  # 0
-    end = len(N) - 1  # 9
-    if n not in n_dic:
-        n_dic[n] = binary(n, N, start, end)  # {-10: 2}
-
-print(' '.join(str(n_dic[x]) if x in n_dic else '0' for x in M))
-
+# https://www.youtube.com/watch?v=QVoEbcK-eNI
