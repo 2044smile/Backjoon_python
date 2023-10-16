@@ -68,3 +68,21 @@
 # print(' '.join(str(n_dic[x]) if x in n_dic else '0' for x in M))
 
 # https://www.youtube.com/watch?v=QVoEbcK-eNI
+# 1. hash 를 활용한 풀이 -> key와 value를 지정해야 한다. -> counting hash
+import sys
+
+input = sys.stdin.readline
+N = int(input())
+a = map(int, input().split())
+
+# 1. hash에 num 개수 반영
+hash = {}
+for num in a:
+    # 원래 있는 값을 가져와 달라 num 이라는 키가 존재하면 그 값을 가져오고, num이라는 키가 존재하지 않으면 0 을 반환
+    hash[num] = hash.setdefault(num, 0) + 1
+
+# 2. hash 에서 num 개수 출력
+M = int(input())
+b = map(int, input().split())
+for num in b:
+    print(hash.setdefault(num, 0), end=' ')
