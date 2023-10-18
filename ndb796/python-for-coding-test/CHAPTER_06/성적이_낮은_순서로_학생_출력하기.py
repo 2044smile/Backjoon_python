@@ -18,3 +18,19 @@ lst.sort(key=lambda x: x[1])
 
 for _ in lst:
     print(_[0], end=' ')
+
+# 6-11.py 답안 예시
+n = int(input())
+
+# N명의 학생 정보를 입력받아 리스트에 저장
+array = []
+for i in range(n):
+    input_data = input().split()  # split 해서 데이터를 받고
+    # 이름은 문자열 그대로, 점수는 정수형으로 변환하여 저장
+    array.append((input_data[0], int(input_data[1])))  # str와 int를 분리하여 저장
+
+# 키를 이용하여, 점수를 기준으로 정렬
+array = sorted(array, key=lambda student: student[1])
+
+for student in array:
+    print(student[0], end=' ')
