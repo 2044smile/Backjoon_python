@@ -18,3 +18,14 @@ array = input().split()  # str James 'Tim' Doru Haru
 
 # 순차 탐색 수행 결과 출력
 print(sequential_search(n, target, array))  # 2
+
+# ========================= #
+input_data = input().split()
+n = int(input_data[0])
+target = input_data[1]
+
+array = input.split()
+
+for i in range(len(array)):
+    if array[i] == target:
+        print(i + 1)
