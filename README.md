@@ -22,3 +22,10 @@ for k in range(0, len(lst), 3):
 hash = {}
 hash[num] = hash.setdefault(num, 0)  # hash 안에서 num 이라는 값이 존재하면 그 값을 보여주고, 없다면 0을 반환한다.
 ```
+4. set
+```python
+array = set(map(int, input().split()))  # 파이썬에서 '집합' 을 표현할 때 사용하는 자료형이다.
+# "단순히 특정한 데이터가 존재하는지 검사할 때에 *매우 효과적*으로 사용할 수 있다."
+for i in x:
+    if i in array:  # very fast
+```
