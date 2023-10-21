@@ -85,7 +85,7 @@ M = map(int, input().split())
 def binary(l, N, start, end):
     if start > end:
         return 0
-    mid = (start+end) // 2  # 2 | 0 | 2 | 2 |
+    mid = (start+end) // 2
     if l == N[mid]:
         return 1
     elif l < N[mid]:
