@@ -9,13 +9,13 @@
 적어도 M만큼의 떡을 집에 가져가기 위해 절단기에 설정할 수 있는 높이의 최댓값을 출력한다.
 """
 # 떡의 개수(N)와 요청한 떡의 길이(M)을 입력
-n, m = list(map(int, input().split(' ')))
+n, m = list(map(int, input().split(' ')))  # EX] 4, 6
 # 각 떡의 개별 높이 정보를 입력
-array = list(map(int, input().split()))
+array = list(map(int, input().split()))  # EX] [19, 15, 10, 17]
 
 # 이진 탐색을 위한 시작점과 끝점 설정
 start = 0
-end = max(array)
+end = max(array)  # Get max value in list EX ['19', 15, 10, 17]
 
 # 이진 탐색 수행 (반복적)
 result = 0
@@ -31,7 +31,7 @@ while(start <= end):
         end = mid - 1
     # 떡볶이 양이 충분한 경우 덜 자르기 (왼쪽 부분 탐색)
     else:
-        result = mid # 최대한 덜 잘랐을 때가 정답이므로, 여기에서 result에 기록
+        result = mid  # 최대한 덜 잘랐을 때가 정답이므로, 여기에서 result에 기록
         start = mid + 1
 
 # 정답 출력
